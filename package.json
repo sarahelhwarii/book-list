@@ -10,7 +10,8 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "skeleton": "^0.1.2"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
