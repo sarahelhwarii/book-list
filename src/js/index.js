@@ -40,6 +40,26 @@ class UI {
     document.getElementById("isbn").value = "";
   }
 }
+class store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem("books") === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem("books"));
+    }
+    return books;
+  }
+  static removeBook() {}
+  static displayBooks() {
+    const books = Store.getBooks();
+  }
+  static addBook(book) {
+    const books = Store.getBooks();
+    books.push(book);
+    localStorage.setItem("books", JSON.stringify(books));
+  }
+}
 document.getElementById("book-form").addEventListener("submit", function (e) {
   const title = document.getElementById("title").value,
     author = document.getElementById("author").value,
