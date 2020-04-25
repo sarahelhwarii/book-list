@@ -40,7 +40,7 @@ class UI {
     document.getElementById("isbn").value = "";
   }
 }
-class store {
+class Store {
   static getBooks() {
     let books;
     if (localStorage.getItem("books") === null) {
@@ -52,10 +52,10 @@ class store {
   }
   static removeBook() {}
   static displayBooks() {
-    const books = Store.getBooks();
+    const books = this.getBooks();
   }
   static addBook(book) {
-    const books = Store.getBooks();
+    const books = this.getBooks();
     books.push(book);
     localStorage.setItem("books", JSON.stringify(books));
   }
